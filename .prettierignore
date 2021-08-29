@@ -1,0 +1,10 @@
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# vercel
+.vercel
+next-env.d.ts
