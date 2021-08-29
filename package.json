@@ -3,7 +3,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "build:css": "",
+    "start": "next start",
+    "prepare": "husky install",
+    "test:ts": "tsc --pretty --noEmit",
+    "test:format": "prettier --check .",
+    "test:lint": "eslint --ext ts --ext tsx --ext js",
+    "format": "prettier write .",
+    "test:all": "npm run test:format && npm run test:lint && npm run test:ts && npm run build"
   },
   "dependencies": {
     "next": "latest",
@@ -11,8 +18,19 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@types/node": "^16.7.5",
+    "@types/react": "^17.0.19",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
     "autoprefixer": "^10.2.6",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.25.0",
     "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4"
+    "prettier": "^2.3.2",
+    "tailwindcss": "^2.2.4",
+    "typescript": "4.3",
+    "husky": "^7.0.0"
   }
 }
