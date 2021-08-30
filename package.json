@@ -6,6 +6,7 @@
     "build:css": "",
     "start": "next start",
     "prepare": "husky install",
+    "prettify": "prettier --write .",
     "test:ts": "tsc --pretty --noEmit",
     "test:format": "prettier --check .",
     "test:lint": "eslint --ext ts --ext tsx --ext js",
